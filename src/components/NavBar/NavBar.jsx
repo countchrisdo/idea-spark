@@ -10,10 +10,10 @@ export default function NavBar(props) {
 
   return (
     <nav>
-      <Link to="/orders">Order History</Link>
+      <Link to="/home">Home</Link>
       &nbsp; | &nbsp;
       <Link to="/orders/new">New Order</Link>
-      &nbsp;&nbsp;<span>Welcome, {props.user.name}</span>
+      
       &nbsp;&nbsp;<Link onClick={handleLogOut} to="">Log Out</Link>
     </nav>
   );
