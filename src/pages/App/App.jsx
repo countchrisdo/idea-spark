@@ -13,13 +13,12 @@ export default function App() {
 
   return (
     <main className="App">
+    <NavBar user={user} setUser={setUser}/>
     <h1>Idea Spark</h1>
-    
-    <LandingPage />
-
+    {/* If user is logged in, run this Switch
+    Switch checks for pathway and changes to appropriate page */}
       { user ?
         <>
-          <NavBar user={user} setUser={setUser} />
           <Switch>
             <Route path="/home">
               <HomePage user={user} setUser={setUser} />
@@ -31,7 +30,10 @@ export default function App() {
           </Switch>
         </>
         :
+        <div>
+        <LandingPage />
         <AuthPage setUser={setUser} />
+        </div>
       }
     </main>
   );
