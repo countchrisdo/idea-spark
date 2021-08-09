@@ -1,14 +1,18 @@
 import * as userService from '../../utilities/users-service';
+import Header from '../../components/Header/Header';
+import Moodboards from '../../components/Moodboards/Moodboards';
+import Sidebar from '../../components/Sidebar/Sidebar';
 
 export default function HomePage({user}) {
   return (
-    <div className="home-page">
-      <div className="home-page-header">
-        <h1>Home Page</h1>
+    <>
+    <Header />
+      <div className="home">
+        {/* <h1>Home Page</h1>
+        <p>Welcome {user.name}!</p> */}
+        <Moodboards />
+        <Sidebar />
       </div>
-      <div className="home-page-body">
-        <p>Welcome {user.name}!</p>
-      </div>
-    </div>
+    </>
   );
 }

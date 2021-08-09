@@ -44,7 +44,7 @@ export default function App() {
   return (
     <main className="App">
     <NavBar user={user} setUser={setUser}/>
-    <h1>Idea Spark</h1>
+    {/* <h4>Idea Spark</h4> */}
     {/* If user is logged in, run this Switch
     Switch checks for pathway and changes to appropriate page */}
       { user ?
@@ -65,7 +65,7 @@ export default function App() {
         <AuthPage setUser={setUser} />
         </div>
       }
-<h1>Photo Upload test</h1>
+{/* <h1>Photo Upload test</h1>
 <section className="flex-ctr-ctr">
         <input type="file" ref={fileInputRef} />
         <input value={title} onChange={(evt) => setTitle(evt.target.value)} placeholder="Photo Title" />
@@ -73,7 +73,7 @@ export default function App() {
       </section>
       <section>
         {photos.map(p => <PhotoCard photo={p} key={p._id} />)}
-      </section>
+      </section> */}
     
     </main>
   );
