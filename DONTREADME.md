@@ -7,3 +7,6 @@ npx kill-port 3000
 npx kill-port 3001
 
 rfc to begin new component
+
+deployment
+git push heroku main

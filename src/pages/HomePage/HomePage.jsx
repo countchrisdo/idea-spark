@@ -3,6 +3,8 @@ import Header from '../../components/Header/Header';
 import Moodboards from '../../components/Moodboards/Moodboards';
 import Sidebar from '../../components/Sidebar/Sidebar';
 
+import './HomePage.css';
+
 export default function HomePage({user}) {
   return (
     <>

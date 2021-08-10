@@ -1,17 +1,15 @@
 import "./Moodboards.css"
+import Moodboard from "../Moodboard/Moodboard"
 
 
 export default function Moodboards() {
     return (
         <div className="moodboards">
-            <p>moodboards go here</p>
-            <p>moodboards go here</p>
-            <p>moodboards go here</p>
-            <p>moodboards go here</p>
-            <p>moodboards go here</p>
-            <p>moodboards go here</p>
-            <p>moodboards go here</p>
-            <p>moodboards go here</p>
+            <Moodboard />
+            <Moodboard />
+            <Moodboard />
+            <Moodboard />
+            <Moodboard />
         </div>
     )
 }

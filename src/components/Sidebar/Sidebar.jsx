@@ -11,9 +11,12 @@ export default function Sidebar() {
       <div className="sidebarItem">
         <span className="sidebarTitle">CATAGORIES</span>
         <ul className="sidebarCategories">
-          <li className="sidebarListItems">Item</li>
-          <li className="sidebarListItems">Item</li>
-          <li className="sidebarListItems">Item</li>
+          <li className="sidebarListItem">Item</li>
+          <li className="sidebarListItem">Item</li>
+          <li className="sidebarListItem">Item</li>
+          <li className="sidebarListItem">Item</li>
+          <li className="sidebarListItem">Item</li>
+          <li className="sidebarListItem">Item</li>
         </ul>
         <div className="sidebarItem">
           <span className="sidebarTitle">FOLLOW US</span>
