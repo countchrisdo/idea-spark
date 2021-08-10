@@ -6,8 +6,8 @@ export default function Header() {
     return (
         <div className="header">
             <div className="headerTitles">
-                <span className="headerTitleSm">React & Node</span>
-                <span className="headerTitleLg">Blog</span>
+                <span className="headerTitleSm">Header Small</span>
+                <span className="headerTitleLg">React Moodboards</span>
             </div>
          <img className="headerImg" src="https://cdnb.artstation.com/p/assets/images/images/014/855/527/medium/gilles-ketting-orion3-export-e1.jpg?1545927368" alt="headerImg" />
         </div>
