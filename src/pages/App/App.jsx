@@ -54,14 +54,20 @@ export default function App() {
         <>
           <Switch>
             <Route path="/home">
-              {/* <HomePage user={user} setUser={setUser} /> */}
+             <HomePage user={user} setUser={setUser} />
               {/* <Single ></Single> */}
-              {/* <Create /> */}
-              {/* <Settings /> */}
             </Route>
             <Route path="/AboutPage">
               <AboutPage />
             </Route>
+            <Route path="/Create">
+              <Create />
+            </Route>
+            <Route path="/Settings">
+              <Settings />
+            </Route>
+
+            {/* sets default path is home */}
             <Redirect to="/home" />
           </Switch>
         </>
