@@ -1,12 +1,13 @@
-import './Single.css'
+import './DetailPage.css'
 import Sidebar from '../../components/Sidebar/Sidebar'
-import SinglePost from '../../components/SinglePost/SinglePost'
+import BoardDetail from '../../components/BoardDetail/BoardDetail'
 
 export default function Single() {
     return (
         <div className="single">
             {/* post */}
-            <SinglePost />
+            <BoardDetail />
+            
             <Sidebar />
         </div>
     )

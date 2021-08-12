@@ -5,7 +5,9 @@ import "./NavBar.css";
 // Not destructuring props this time
 export default function NavBar(props) {
   function handleLogOut() {
+    // Delegate to the users-service
     userService.logOut();
+    // Update state will also cause a re-render
     props.setUser(null);
   }
 
@@ -20,11 +22,12 @@ export default function NavBar(props) {
       </div>
       <div className="topCenter">
       <ul className="topList">
-        <li className="topIcon" ><Link to="/home">Home</Link></li>
-        <li className="topIcon"><Link to="/AboutPage">About</Link></li>
-        <li className="topIcon"><Link to="/home">Contact</Link></li>
-        <li className="topIcon"><Link to="/home">Write</Link></li>
-        <li className="topIcon"><Link onClick={handleLogOut} to="">
+        <li className="topListItem" ><Link className="link" to="/home">Home</Link></li>
+        <li className="topListItem"><Link className="link" to="/AboutPage">About</Link></li>
+        <li className="topListItem"><Link className="link" to="/home">blank</Link></li>
+        
+        <li className="topListItem"><Link className="link" to="/create">Create</Link></li>
+        <li className="topListItem"><Link className="link" onClick={handleLogOut} to="">
           Log Out
         </Link></li>
       </ul>

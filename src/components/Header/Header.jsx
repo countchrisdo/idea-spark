@@ -6,10 +6,10 @@ export default function Header() {
     return (
         <div className="header">
             <div className="headerTitles">
-                <span className="headerTitleSm">Header Small</span>
-                <span className="headerTitleLg">React Moodboards</span>
+                <span className="headerTitleSm">Moodboards Built With REACT</span>
+                <span className="headerTitleLg">Idea Spark</span>
             </div>
-         <img className="headerImg" src="https://cdnb.artstation.com/p/assets/images/images/014/855/527/medium/gilles-ketting-orion3-export-e1.jpg?1545927368" alt="headerImg" />
+         <img className="headerImg" src="https://cdn.dribbble.com/users/433036/screenshots/9963476/media/22584ca9bda66536f052d1c9c9a86507.jpg?compress=1&resize=1200x900" alt="headerImg" />
         </div>
     )
 }

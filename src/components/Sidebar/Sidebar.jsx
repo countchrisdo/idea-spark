@@ -4,22 +4,22 @@ export default function Sidebar() {
   return (
     <div className="sidebar">
       <div className="sidebarItem">
-        <span className="sidebarTitle">ABOUT ME</span>
+        <span className="sidebarTitle">ABOUT</span>
         <img src="https://cdn.onlinewebfonts.com/svg/img_30505.png" />
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        <p>Important information goes here. You see this? This is very important information. You know it's important because I'm telling you it is! Funny how that works?</p>
       </div>
       <div className="sidebarItem">
         <span className="sidebarTitle">CATAGORIES</span>
         <ul className="sidebarCategories">
-          <li className="sidebarListItem">Item</li>
-          <li className="sidebarListItem">Item</li>
-          <li className="sidebarListItem">Item</li>
-          <li className="sidebarListItem">Item</li>
-          <li className="sidebarListItem">Item</li>
-          <li className="sidebarListItem">Item</li>
+          <li className="sidebarListItem">Item1</li>
+          <li className="sidebarListItem">Item2</li>
+          <li className="sidebarListItem">Item3</li>
+          <li className="sidebarListItem">Item4</li>
+          <li className="sidebarListItem">Item5</li>
+          <li className="sidebarListItem">Item6</li>
         </ul>
         <div className="sidebarItem">
-          <span className="sidebarTitle">FOLLOW US</span>
+          <span className="sidebarTitle">Placeholder</span>
           <div className="sidebarSocial">
             <i
               className="sidebarIcon"

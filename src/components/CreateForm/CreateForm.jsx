@@ -1,6 +1,6 @@
-import "./Create.css";
+import "./CreateForm.css";
 
-export default function Create() {
+export default function CreateForm() {
   return (
     <div className="create">
       <img
