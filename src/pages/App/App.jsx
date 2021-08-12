@@ -10,6 +10,9 @@ import HomePage from '../HomePage/HomePage';
 import AboutPage from '../AboutPage/AboutPage';
 import NavBar from '../../components/NavBar/NavBar';
 import LandingPage from '../LandingPage/LandingPage';
+import Single from '../Single/Single';
+import Create from '../Create/Create';
+import Settings from '../Settings/Settings';
 
 export default function App() {
   const [user, setUser] = useState(getUser());
@@ -51,7 +54,10 @@ export default function App() {
         <>
           <Switch>
             <Route path="/home">
-              <HomePage user={user} setUser={setUser} />
+              {/* <HomePage user={user} setUser={setUser} /> */}
+              {/* <Single ></Single> */}
+              {/* <Create /> */}
+              {/* <Settings /> */}
             </Route>
             <Route path="/AboutPage">
               <AboutPage />
