@@ -1,12 +1,17 @@
+import { useParams } from 'react-router-dom';
+
 import './DetailPage.css'
 import Sidebar from '../../components/Sidebar/Sidebar'
 import BoardDetail from '../../components/BoardDetail/BoardDetail'
 
 export default function Single() {
+
+    const { boardId } = useParams();
+
     return (
         <div className="single">
             {/* post */}
-            <BoardDetail />
+            <BoardDetail boardId={boardId} />
             
             <Sidebar />
         </div>

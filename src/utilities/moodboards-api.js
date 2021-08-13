@@ -13,7 +13,7 @@ export function addMoodboard(moodboardData) {
 }
 
 export function getOne(id) {
-    return sendRequest(`${BASE_URL}/${id}`, 'POST');
+    return sendRequest(`${BASE_URL}/${id}`);
 }
 
 export async function deleteOne(id) {

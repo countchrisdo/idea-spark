@@ -6,8 +6,8 @@ export function getAll() {
   return sendRequest(BASE_URL);
 }
 
-export function upload(formData) {
+export function upload(formData, boardId) {
   // See refactored sendRequest function that now accepts a 4th arg
   // used to specify that the payload is a FormData object
-  return sendRequest(`${BASE_URL}/upload`, 'POST', formData, true);
+  return sendRequest(`${BASE_URL}/${boardId}/upload`, 'POST', formData, true);
 }

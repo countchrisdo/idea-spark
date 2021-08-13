@@ -1,14 +1,13 @@
 import "./BoardDetail.css"
 import { useState, useRef, useEffect } from 'react';
+
 import * as photosAPI from '../../utilities/photos-api';
+import * as moodboardsAPI from '../../utilities/moodboards-api';
 import PhotoCard from '../../components/PhotoCard/PhotoCard';
 
 
-export default function BoardDetail() {
-
-
-    const [title, setTitle] = useState('');
-    const [photos, setPhotos] = useState([]);
+export default function BoardDetail( {boardId} ) {
+    const [board, setBoard] = useState(null);
     // Use a ref prop on the <input> in the JSX to
     // create a reference to the <input>, i.e.,
     // inputRef.current will be the <input> DOM element
@@ -17,7 +16,7 @@ export default function BoardDetail() {
     // Fetch existing uploaded photos after first render
     // Photos will be sorted in the controller with the most recent first
     useEffect(function() {
-      photosAPI.getAll().then(photos => setPhotos(photos));
+      moodboardsAPI.getOne(boardId).then(moodboard => setBoard(moodboard));
     }, []);
   
     /*--- Event Handlers ---*/
@@ -26,15 +25,14 @@ export default function BoardDetail() {
       // Use FormData object to send the inputs in the fetch request
       // https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch#uploading_a_file
       const formData = new FormData();
-      formData.append('title', title);
       formData.append('photo', fileInputRef.current.files[0]);
-      const newPhoto = await photosAPI.upload(formData);
-      setPhotos([newPhoto, ...photos]);
-      // Clear the description and file inputs
-      setTitle('');
+      const updatedBoard = await photosAPI.upload(formData, boardId);
+      setBoard(updatedBoard);
+      // Clear the file input
       fileInputRef.current.value = '';
     }
 
+    if (!board) return null;
     return (
         <div className="singlePost">
             <div className="singlePostWrapper">
@@ -59,11 +57,10 @@ export default function BoardDetail() {
                 <h1>Photo Upload test</h1>
 <section className="flex-ctr-ctr">
         <input type="file" ref={fileInputRef} />
-        <input value={title} onChange={(evt) => setTitle(evt.target.value)} placeholder="Photo Title" />
         <button onClick={handleUpload}>Upload Photo</button>
       </section>
       <section>
-        {photos.map(p => <PhotoCard photo={p} key={p._id} />)}
+        {board.photos.map(p => <PhotoCard photo={p} key={p._id} />)}
       </section>   
         </div>
     )

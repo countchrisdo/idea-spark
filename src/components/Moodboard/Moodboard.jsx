@@ -10,14 +10,14 @@ export default function Moodboard() {
 
       <div className="boardInfo">
         <div className="boardCats">
-          <span className="boardCat">Music</span>
-          <span className="boardCat">Life</span>
+          <span className="boardCat">Catagory1</span>
+          <span className="boardCat">Catagory2</span>
         </div>
         <span className="boardTitle">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit
         </span>
         <hr />
-        <span className="boardDate">1 Hour Ago</span>
+        {/* <span className="boardDate">1 Hour Ago</span> */}
       </div>
     </div>
   );
