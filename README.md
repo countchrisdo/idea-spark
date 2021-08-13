@@ -31,7 +31,6 @@ Idea Spark is a brand new destination to view and share your ideas with the worl
 <img src="https://user-images.githubusercontent.com/7240924/126803967-55401e90-aca4-4245-abc9-81457c2ec5f1.gif" alt="img3" width="50%"/>
 <img src="https://i.imgur.com/eevQPFb.png" alt="img2" width="50%"/> -->
 
-
 ## Tech!
 
 - Html
@@ -52,9 +51,8 @@ Idea Spark is a brand new destination to view and share your ideas with the worl
 - [Trello Board](https://trello.com/b/JZ6G2PbT/idea-spark-%F0%9F%92%A1%E2%9C%A8-moodboards)
 
 ### What's next for WTPA?
-- ~~X out test~~
+- ~~Upload images~~
 - Social Media intergration
 - Public and Private Boards
 - Folders
-
-
+- 
