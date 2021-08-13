@@ -5,8 +5,6 @@ export default async function sendRequest(url, method = 'GET', payload = null, p
   // used to include a data payload, set headers, etc. 
   const options = { method };
   if (payload) {
-    // If payload is a FormData object, fetch automatically
-    // sets the Content-Type to 'multipart/form-data'
     options.headers = payloadIsFormData ? {} : { 'Content-Type': 'application/json' };
     // If payload is a FormData object, don't stringify it
     options.body = payloadIsFormData ? payload : JSON.stringify(payload);
