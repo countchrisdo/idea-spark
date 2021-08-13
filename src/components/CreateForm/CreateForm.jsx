@@ -1,38 +1,86 @@
 import "./CreateForm.css";
+import { useState, useRef } from "react";
+import { addMoodboard } from "../../utilities/moodboards-api";
 
-export default function CreateForm() {
+const initialFormData = {
+  moodboardName: '',
+  description: '',
+  category: 'ETC'
+};
+
+export default function CreateForm({ setShowForm, setMoodboards, Moodboards }) {
+  const [formData, setFormData] = useState({
+    moodboardName: "",
+    description: "",
+    category: "ETC"
+  });
+
+  function handleChange(evt) {
+    setFormData({
+      ...formData,
+      [evt.target.name]: evt.target.value,
+    });
+  }
+
+  async function handleSubmit(evt) {
+    evt.preventDefault();
+    console.log(formData);
+    try {
+      // const formInfo = { ...formData };
+      const saveData = await addMoodboard(formData);
+      setShowForm(false);
+      setMoodboards([...Moodboards, saveData]);
+    } catch {
+      console.log("error");
+    }
+  }
+
   return (
     <div className="create">
-      <img
-        className="createImg"
-        src="https://cdn.dribbble.com/users/2171669/screenshots/5911127/image.png?compress=1&resize=800x600"
-        alt=""
-      />
-      <form className="createForm">
+      <h1 className="createFormHeader">Create a Board</h1>
+      <br className="" />
+      <form className="createForm" autoComplete="off" onSubmit={handleSubmit}>
         <div className="createFormGroup">
-          <label htmlFor="fileInput">
-            <i
-              className="createIcon"
-              class="fa fa-plus-circle"
-              aria-hidden="true"
-            ></i>
-          </label>
-          <input id="fileInput" type="file" style={{ display: "none" }} />
+          <label>Title</label>
           <input
             className="createInput"
             placeholder="Title"
             type="text"
             autoFocus={true}
+            name="moodboardName"
+            value={formData.moodboardName}
+            onChange={handleChange}
+            required
           />
         </div>
         <br />
         <div className="createFormGroup">
+          <label>Description</label>
           <textarea
             className="createInput createText"
-            placeholder="Tell your story..."
+            placeholder="What are you creating?"
             type="text"
             autoFocus={true}
+            name="description"
+            value={formData.description}
+            onChange={handleChange}
+            required
           />
+        </div>
+        <br />
+        <div className="createFormGroup">
+          <label>Category</label>
+          <select
+            className=" createText"
+            name="category"
+            value={formData.category}
+            onChange={handleChange}
+          >
+            <option value="Aesthetic">Aesthetic</option>
+            <option value="Creative">Creative</option>
+            <option value="Web Design">Web Design</option>
+            <option value="ETC">Et Cetera</option>
+          </select>
         </div>
         <button className="createSubmit" type="submit">
           Publish

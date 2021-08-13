@@ -2,7 +2,6 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 const photoSchema = new Schema({
-    content: String,
     url: { type: String, required: true }
 }, {
     timestamps: true
@@ -13,9 +12,9 @@ const moodboardSchema = new Schema({
         type: String,
         required: true
     },
-    difficulty: {
+    category: {
         type: String,
-        enum: ['Beginner', 'Intermediate', 'Expert'],
+        enum: ['Aesthetic', 'Creative', 'Web Design', 'ETC'],
     },
     description: {
         type: String,
@@ -28,4 +27,4 @@ const moodboardSchema = new Schema({
 });
 
 
-module.exports = mongoose.model('Location', moodboardSchema);
+module.exports = mongoose.model('Moodboard', moodboardSchema);

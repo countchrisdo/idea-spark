@@ -34,7 +34,7 @@ export default function NavBar(props) {
         {/* &nbsp; | &nbsp; */}
       </div>
       <div className="topRight">
-        <img className="topImg" src="https://png.pngtree.com/png-vector/20190118/ourlarge/pngtree-polygon-letter-s-icon-vector-logo-png-image_326968.jpg"/>
+        <img className="topImg" src="https://png.pngtree.com/png-vector/20190118/ourlarge/pngtree-polygon-letter-s-icon-vector-logo-png-image_326968.jpg" alt="topimg"/>
         <i className="topSearchIcon" class="fa fa-search" aria-hidden="true"></i>
 
       </div>

@@ -1,4 +1,4 @@
-import { useState, useRef, useEffect } from 'react';
+import { useState} from 'react';
 import { Redirect, Route, Switch } from 'react-router-dom';
 import './App.css';
 
@@ -12,7 +12,7 @@ import NavBar from '../../components/NavBar/NavBar';
 import LandingPage from '../LandingPage/LandingPage';
 import Single from '../DetailPage/DetailPage';
 import Settings from '../Settings/Settings';
-import CreateForm from '../../components/CreateForm/CreateForm';
+import CreatePage from '../CreatePage/CreatePage';
 
 export default function App() {
   const [user, setUser] = useState(getUser());
@@ -34,7 +34,7 @@ export default function App() {
               <AboutPage />
             </Route>
             <Route path="/Create">
-              <CreateForm />
+              <CreatePage />
             </Route>
             <Route path="/Settings">
               <Settings />

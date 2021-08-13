@@ -1,5 +1,4 @@
-import { render } from "react-dom";
-
+// import { render } from "react-dom";
 
 
 export default function LandingPage() {

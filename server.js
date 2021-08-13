@@ -26,6 +26,7 @@ app.use(require('./config/checkToken'));
 // Put API routes here, before the "catch all" route
 app.use('/api/users', require('./routes/api/users'));
 app.use('/api/photos', require('./routes/api/photos'));
+app.use('/api/moodboards', require('./routes/api/moodboards'));
 
 // The following "catch all" route (note the *) 
 // is necessary to return the index.html on ALL

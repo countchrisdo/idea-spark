@@ -1,18 +1,22 @@
-
 import sendRequest from './send-request';
 
 const BASE_URL = '/api/moodboards';
 
-// Retrieve an unpaid order for the logged in user
+// Retrieve
 export function getAll() {
   return sendRequest(`${BASE_URL}`);
 }
 
-
-export function addLocation(moodboardData) {
-  return sendRequest(`${BASE_URL}/create`, 'POST', moodboardData, true);
+export function addMoodboard(moodboardData) {
+ 
+  return sendRequest(`${BASE_URL}/create`, 'POST', moodboardData);
 }
 
 export function getOne(id) {
-    return sendRequest(`${BASE_URL}/${id}`);
+    return sendRequest(`${BASE_URL}/${id}`, 'POST');
 }
+
+export async function deleteOne(id) {
+  return sendRequest(`${BASE_URL}/${id}`, 'DELETE')
+}
+
