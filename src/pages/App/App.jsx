@@ -11,6 +11,7 @@ import LandingPage from "../LandingPage/LandingPage";
 import DetailPage from "../DetailPage/DetailPage";
 import Settings from "../Settings/Settings";
 import CreatePage from "../CreatePage/CreatePage";
+import Footer from "../../components/Footer/Footer";
 
 export default function App() {
   const [user, setUser] = useState(getUser());
@@ -49,6 +50,7 @@ export default function App() {
           <AuthPage setUser={setUser} />
         </div>
       )}
+      <Footer />
     </main>
   );
 }

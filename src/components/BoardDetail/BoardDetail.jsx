@@ -1,6 +1,5 @@
 import "./BoardDetail.css"
 import { useState, useRef, useEffect } from 'react';
-
 import * as photosAPI from '../../utilities/photos-api';
 import * as moodboardsAPI from '../../utilities/moodboards-api';
 import PhotoCard from '../../components/PhotoCard/PhotoCard';
@@ -48,7 +47,6 @@ export default function BoardDetail( {boardId} ) {
                     </div>
                 </h1>
                 <div className="singlePostInfo">
-{/* <span classname="singlePostAuthor">Author: <b>Chris</b> </span> */}
 <span classname="singlePostAuthorDate"> 1 Hour Ago </span>
                 </div>
                 <p>lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum 
