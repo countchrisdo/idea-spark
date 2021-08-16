@@ -17,14 +17,12 @@ export default function Sidebar({}) {
       <div className="sidebarItem">
         <span className="sidebarTitle">CATAGORIES</span>
         <ul className="sidebarCategories">
-          <li className="sidebarListItem">Item1</li>
-          <li className="sidebarListItem">Item2</li>
-          <li className="sidebarListItem">Item3</li>
-          <li className="sidebarListItem">Item4</li>
-          <li className="sidebarListItem">Item5</li>
-          <li className="sidebarListItem">Item6</li>
+          <li className="sidebarListItem">Aesthetic</li>
+          <li className="sidebarListItem">Creative</li>
+          <li className="sidebarListItem">Web Design</li>
+          <li className="sidebarListItem">ETC</li>
         </ul>
-        <div className="sidebarItem">
+        {/* <div className="sidebarItem">
           <span className="sidebarTitle">Placeholder</span>
           <div className="sidebarSocial">
             <i
@@ -48,7 +46,7 @@ export default function Sidebar({}) {
               aria-hidden="true"
             ></i>
           </div>
-        </div>
+        </div> */}
       </div>
     </div>
   );

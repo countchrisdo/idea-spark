@@ -12,13 +12,10 @@ export default function MoodboardCard({board}) {
       <div className="boardInfo">
         <h4>Creator: {board.user.name}</h4>
         <div className="boardCats">
-          <span className="boardCat">Catagory1</span>
-          <span className="boardCat">Catagory2</span>
+          <span className="boardCat">{board.category}</span>
         </div>
         <span className="boardTitle">
-            Moodboard Card Title
             {board.moodboardName}
-            
         </span>
       </div>
     </div>
