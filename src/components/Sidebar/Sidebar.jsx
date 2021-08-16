@@ -1,8 +1,14 @@
 import "./Sidebar.css";
+import { useState } from "react";
+import { getUser } from "../../utilities/users-service";
 
-export default function Sidebar() {
+
+
+export default function Sidebar({}) {
+  const [user, setUser] = useState(getUser());
   return (
     <div className="sidebar">
+    Welcome {user.name}!
       <div className="sidebarItem">
         <span className="sidebarTitle">ABOUT</span>
         <img src="https://cdn.onlinewebfonts.com/svg/img_30505.png" alt="sidebar"/>

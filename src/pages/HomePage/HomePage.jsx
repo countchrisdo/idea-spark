@@ -1,18 +1,28 @@
-// import * as userService from '../../utilities/users-service';
+import { useEffect, useState } from 'react'
 import Header from '../../components/Header/Header';
-import Moodboards from '../../components/Moodboards/Moodboards';
+import MoodboardIndex from '../../components/MoodboardIndex/MoodboardIndex';
 import Sidebar from '../../components/Sidebar/Sidebar';
+import * as moodboardsAPI from '../../utilities/moodboards-api'
 
 import './HomePage.css';
 
-export default function HomePage({user}) {
+export default function HomePage() {
+  const [moodboards, setMoodboards] = useState([]);
+
+  useEffect(function() {
+    async function getMoodBoards() {
+      const response = await moodboardsAPI.getAll();
+      setMoodboards(moodboards);
+    }
+    getMoodBoards();
+  }, []);
+
   return (
     <>
     <Header />
+    <p></p>
       <div className="home">
-        {/* <h1>Home Page</h1>
-        <p>Welcome {user.name}!</p> */}
-        <Moodboards />
+        <MoodboardIndex />
         <Sidebar />
       </div>
     </>

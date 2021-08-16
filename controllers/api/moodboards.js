@@ -21,11 +21,17 @@ async function createMoodboard(req, res) {
     const moodboard = await Moodboard.create(req.body);
     res.json(moodboard);
 }
+// Index funcitonality for a indv user
+// async function index(req, res) {
+//     const moodboards = await Moodboard.find({user:req.user._id}).sort('-createdAt').exec();
+//     res.json(moodboards);
+// }
 
 async function index(req, res) {
-    const moodboards = await Moodboard.find({user:req.user._id}).sort('-createdAt').exec();
+    const moodboards = await Moodboard.find({}).sort('-createdAt').populate("user","name").exec();
     res.json(moodboards);
 }
+
 async function detail(req, res) {
     const moodboard = await Moodboard.findById(req.params.id);
     res.json(moodboard);

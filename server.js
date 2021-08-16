@@ -35,7 +35,6 @@ app.get('/*', function(req, res) {
   res.sendFile(path.join(__dirname, 'build', 'index.html'));
 });
 
-
 // Configure express app to listen on port 3001
 // to avoid conflicting with the react server
 const port = process.env.PORT || 3001;

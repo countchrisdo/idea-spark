@@ -49,7 +49,7 @@ export default function BoardDetail( {boardId} ) {
                 <div className="singlePostInfo">
 <span classname="singlePostAuthorDate"> 1 Hour Ago </span>
                 </div>
-                <p>lorem ipsum dolor sit amet, consectetur adipiscing elit. Lorem ipsum 
+                <p>lorem ipsum
                  </p>
                 </div> 
                 <h1>Photo Upload test</h1>
@@ -57,6 +57,8 @@ export default function BoardDetail( {boardId} ) {
         <input type="file" ref={fileInputRef} />
         <button onClick={handleUpload}>Upload Photo</button>
       </section>
+
+      {/* Photo grid - to be styled */}
       <section>
         {board.photos.map(p => <PhotoCard photo={p} key={p._id} />)}
       </section>   
