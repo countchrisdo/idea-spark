@@ -44,3 +44,9 @@ async function updateOne(req, res) {
     const moodboard = await Moodboard.findOneAndUpdate( {_id: req.params.id}, req.body, {new:true} );
     res.json(moodboard);
 }
+
+// get one photo from a moodboard
+async function getPhoto(req, res) { 
+    const photo = await Moodboard.findById(req.params.id).populate("user","name").exec();
+    res.json(photo);
+}

@@ -12,6 +12,7 @@ export default function NavBar(props) {
     props.setUser(null);
   }
 
+//if user is logged in, render navbar with logout button
 if (props.user != null) {
   return (
     <nav className="navbar">
@@ -58,6 +59,8 @@ if (props.user != null) {
       </ul>
       </div>
       <div className="topRight">
+      <Link className="link" to="/Authentication">Login</Link>
+      &nbsp; | &nbsp;
       <Link className="link" to="/settings"><i className="topListItem" class="fa  fa-user-circle" aria-hidden="true"></i></Link>
       &nbsp; | &nbsp;
         <i className="topSearchIcon" class="fa fa-search" aria-hidden="true"></i>

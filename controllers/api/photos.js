@@ -29,3 +29,10 @@ async function upload(req, res) {
     res.status(400).json(err.message);
   }
 }
+
+// get one photo
+
+async function get(req, res) {
+  const photo = await Photo.findById(req.params.id).exec();
+  res.json(photo);
+}
