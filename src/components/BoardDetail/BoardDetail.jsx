@@ -57,10 +57,7 @@ export default function BoardDetail({ boardId }) {
         </div>
         <p>{board.description}</p>
       </div>
-      <section className="flex-ctr-ctr">
-        <input type="file" ref={fileInputRef} />
-        <button onClick={handleUpload}>Upload Photo</button>
-      </section>
+     
       <hr className="hr" />
 
       {/* Photo grid - to be styled */}
@@ -69,6 +66,15 @@ export default function BoardDetail({ boardId }) {
           <PhotoCard photo={p} key={p._id} />
         ))}
       </section>
+
+      <hr className="hr" />
+
+      <section className="flex-ctr-ctr">
+        <input type="file" ref={fileInputRef} />
+        <button onClick={handleUpload}>Upload Photo</button>
+      </section>
+     
+
     </div>
   );
 }

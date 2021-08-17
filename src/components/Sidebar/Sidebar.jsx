@@ -12,7 +12,7 @@ export default function Sidebar({}) {
       <div className="sidebarItem">
         <span className="sidebarTitle">ABOUT</span>
         <img src="https://cdn.onlinewebfonts.com/svg/img_30505.png" alt="sidebar"/>
-        <p>Important information goes here. You see this? This is very important information. You know it's important because I'm telling you it is! Funny how that works?</p>
+        <p>Welcome to Idea Spark</p>
       </div>
       <div className="sidebarItem">
         <span className="sidebarTitle">CATAGORIES</span>
