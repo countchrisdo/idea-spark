@@ -2,8 +2,6 @@ import "./Sidebar.css";
 import { useState } from "react";
 import { getUser } from "../../utilities/users-service";
 
-
-
 export default function Sidebar({}) {
   const [user, setUser] = useState(getUser());
   return (

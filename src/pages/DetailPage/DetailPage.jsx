@@ -11,8 +11,7 @@ export default function DetailPage() {
     return (
         <div className="single">
             {/* post */}
-            <BoardDetail boardId={boardId} />
-            
+            <BoardDetail boardId={boardId} />    
             <Sidebar />
         </div>
     )

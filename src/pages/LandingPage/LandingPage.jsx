@@ -8,7 +8,6 @@ export default function LandingPage() {
         <div className="landing-page">
       <Header />
       <br ></br>
-      <h2 className="landingDesc"> Sign up today!</h2>
     </div>
       
     );

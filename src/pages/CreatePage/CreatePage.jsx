@@ -20,6 +20,8 @@ export default function CreatePage() {
         moodboards={moodboards}
         setMoodboards={setMoodboards}
       />
+
+      
     </div> 
   );
 }

@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Redirect, Route, Switch } from "react-router-dom";
-import "./App.css";
+
 
 import { getUser } from "../../utilities/users-service";
 import AuthPage from "../AuthPage/AuthPage";
@@ -19,7 +19,6 @@ export default function App() {
   return (
     <main className="App">
       <NavBar user={user} setUser={setUser} />
-      {/* <h4>Idea Spark</h4> */}
       {/* If user is logged in, run this Switch
     Switch checks for pathway and changes to appropriate page */}
       {user ? (
@@ -46,8 +45,15 @@ export default function App() {
         </>
       ) : (
         <div>
-          <LandingPage />
-          <AuthPage setUser={setUser} />
+          <Switch>
+            <Route path="/AboutPage">
+              <AboutPage />
+            </Route>
+            <Route path="/">
+              <LandingPage />
+              <AuthPage setUser={setUser} />
+            </Route>
+          </Switch>
         </div>
       )}
       <Footer />
