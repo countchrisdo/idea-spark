@@ -22,31 +22,6 @@ export default function Sidebar({}) {
           <li className="sidebarListItem">Web Design</li>
           <li className="sidebarListItem">ETC</li>
         </ul>
-        {/* <div className="sidebarItem">
-          <span className="sidebarTitle">Placeholder</span>
-          <div className="sidebarSocial">
-            <i
-              className="sidebarIcon"
-              class="fa fa-facebook-official"
-              aria-hidden="true"
-            ></i>
-            <i
-              className="sidebarIcon"
-              class="fa fa-twitter-square"
-              aria-hidden="true"
-            ></i>
-            <i
-              className="sidebarIcon"
-              class="fa fa-pinterest-square"
-              aria-hidden="true"
-            ></i>
-            <i
-              className="sidebarIcon"
-              class="fa fa-instagram"
-              aria-hidden="true"
-            ></i>
-          </div>
-        </div> */}
       </div>
     </div>
   );

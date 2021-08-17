@@ -1,22 +1,33 @@
-.PhotoCard {
-  display: grid;
-  grid-template-columns: 20vw;
-  grid-template-rows: auto auto;
+
+@media (min-width: 1200px) {
+  .PhotoCard {
+  -moz-column-count:    5;
+  -webkit-column-count: 5;
+  column-count:         5;
+  }
 }
 
-.PhotoCard div {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 5vmin;
-  color: white;
-  background-color: grey;
-  font-size: 3vmin;
-  padding-bottom: .5vmin;
+@media (max-width: 1200px) {
+  .PhotoCard {
+  -moz-column-count:    4;
+  -webkit-column-count: 4;
+  column-count:         4;
+  }
+}
+@media (max-width: 1000px) {
+  .PhotoCard {
+  -moz-column-count:    3;
+  -webkit-column-count: 3;
+  column-count:         3;
+  }
 }
 
 .PhotoCard img {
-  width: 100%;
-  border: .5vmin solid grey;
-  border-bottom: none;
+  /* width: 100%; */
+  
+  /* width: 20vw;
+  border: .5vmin solid grey; */
+
+  width: 100% !important;
+  height: auto !important;
 }

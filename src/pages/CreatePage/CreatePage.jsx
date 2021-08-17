@@ -4,7 +4,6 @@ import * as moodboardsAPI from "../../utilities/moodboards-api";
 
 export default function CreatePage() {
   const [moodboards, setMoodboards] = useState();
-  const [showPage, setShowPage] = useState(false);
   
   useEffect(function() {
     async function getMoodboards() {
@@ -14,22 +13,13 @@ export default function CreatePage() {
     getMoodboards();
 }, []);
    
-if (!showPage) {
+
   return (
     <div>
-      <button onClick={() => setShowPage(true)}>Show</button>
-    </div>
-  );
-} else {
-  return (
-    <div>
-    <button onClick={() => setShowPage(false)}>Hide</button>
       <CreateForm
         moodboards={moodboards}
         setMoodboards={setMoodboards}
-        setShowPage={setShowPage}
       />
     </div> 
   );
-}
 }

@@ -2,9 +2,8 @@ import './PhotoCard.css';
 
 export default function PhotoCard({ photo }) {
   return (
-    <article className="PhotoCard">
-      <img src={photo.url} alt={photo.title} />
-      <div>{photo.title}</div>
-    </article>
+    <div className="PhotoCardImg" >
+      <img src={photo.url} alt="boardIMG" />
+    </div>
   );
 }

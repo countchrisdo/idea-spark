@@ -28,7 +28,7 @@ export default function CreateForm({ setShowForm, setMoodboards, Moodboards }) {
     try {
       // const formInfo = { ...formData };
       const saveData = await addMoodboard(formData);
-      setShowForm(false);
+      // setShowForm(true);
       setMoodboards([...Moodboards, saveData]);
     } catch {
       console.log("error");
