@@ -10,11 +10,8 @@ export default function MoodboardCard({board}) {
     <div className="mood">
       <img
         className="postImg"
-        src="https://i.pinimg.com/564x/b0/65/3c/b0653c72f8898fc18f01eaf051a621e9.jpg" alt="postimg"
+        src={board.photos[0] ? board.photos[0].url : "https://i.imgur.com/XjwMOYg.jpg"} alt="postimg"
       />
-      {/* display board image */}
-      
-
       <div className="boardInfo">
         <h4>Creator: {board.user.name} </h4>
         <div className="boardCats">
