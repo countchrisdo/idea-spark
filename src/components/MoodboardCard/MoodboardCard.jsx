@@ -6,7 +6,7 @@ export default function MoodboardCard({board}) {
     <div className="mood">
       <img
         className="postImg"
-        src="https://cdn.dribbble.com/users/2171669/screenshots/5911127/image.png?compress=1&resize=800x600" alt="postimg"
+        src="https://i.pinimg.com/564x/b0/65/3c/b0653c72f8898fc18f01eaf051a621e9.jpg" alt="postimg"
       />
 
       <div className="boardInfo">
