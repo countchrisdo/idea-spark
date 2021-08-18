@@ -1,4 +1,6 @@
 import "./BoardDetail.css";
+import { Link } from "react-router-dom";
+
 import { useState, useRef, useEffect } from "react";
 import * as photosAPI from "../../utilities/photos-api";
 import * as moodboardsAPI from "../../utilities/moodboards-api";
@@ -43,6 +45,7 @@ if (user._id === board.user) {
       <div className="singlePostWrapper">
         <h1 className="singlePostTitle">
           {board.moodboardName}
+          <Link className="link" to="/Moodboard/Update/:boardId">
           <div className="singlePostEdit">
             <i
               className="singlePostIcon"
@@ -55,6 +58,7 @@ if (user._id === board.user) {
               aria-hidden="true"
             ></i>
           </div>
+          </Link>
         </h1>
         <div className="singlePostInfo">
           <span className="singlePostAuthorDate"> {board.category} </span>
