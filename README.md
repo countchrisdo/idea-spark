@@ -1,8 +1,6 @@
 # Idea Spark - Moodboards
 
-<!-- ![icon](https://i.imgur.com/8iUzrPc.png) -->
-
-Discover your ideas and share them with the world.
+![icon](https://i.imgur.com/bGkScfh.png)
 
 Idea Spark is a brand new destination to view and share your ideas with the world! Create a board full of images to invoke your ideas and stir your creativity.
 
@@ -25,11 +23,11 @@ For the person who needs to curate their spring/summer vs fall/winter aesthetiqu
 - Upload your images or add them from the web
 - Share your board with the world
 
-## Demo (tba)
+## View
 
-<!-- <img src="https://i.imgur.com/AXVHvhD.png" alt="img1" width="50%"/>
-<img src="https://user-images.githubusercontent.com/7240924/126803967-55401e90-aca4-4245-abc9-81457c2ec5f1.gif" alt="img3" width="50%"/>
-<img src="https://i.imgur.com/eevQPFb.png" alt="img2" width="50%"/> -->
+<img src="https://i.imgur.com/UaA0XYP.jpg" alt="img1" width="100%"/>
+<img src="https://i.imgur.com/LxDne0O.jpg" alt="img2" width="100%"/>
+
 
 ## Tech!
 
