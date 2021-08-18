@@ -53,3 +53,5 @@ For the person who needs to curate their spring/summer vs fall/winter aesthetiqu
 - Social Media intergration
 - Public and Private Boards
 - Folders
+- Search
+- Profile Pages

@@ -1,0 +1,88 @@
+.create {
+    padding-top: 50px;
+  }
+
+.createFormHeader {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+    color: #4a4a4a;
+    font-size: 48px;
+    font-weight: bold;
+    line-height: 20px;
+    text-align: center;
+    vertical-align: middle;
+    border-radius: 5px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
+    -moz-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
+    -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
+  }
+  
+  .createImg {
+    margin-left: 150px;
+    width: 70vw;
+    height: 250px;
+    border-radius: 10px;
+    object-fit: cover;
+  }
+  
+  .createForm {
+    position: relative;
+  }
+  
+  .createFormGroup {
+    margin-left: 150px;
+    display: flex;
+    align-items: center;
+  }
+  
+  .createIcon {
+    width: 25px;
+    height: 25px;
+    font-size: 20px;
+    border: 1px solid;
+    border-radius: 50%;
+    color: rgb(129, 125, 125);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+  }
+  
+  .createInput {
+    font-size: 30px;
+    border: none;
+    padding: 20px;
+    width: 70vw;
+  }
+  
+  .createInput::placeholder {
+    color: rgb(189, 185, 185);
+    font-weight: 400;
+  }
+  
+  .createInput:focus {
+    outline-style: none;
+  }
+  
+  .createText {
+    width: 70vw;
+    height: 5vh;
+    font-family: inherit;
+    font-size: 20px;
+    
+  }
+  
+  .createSubmit {
+    color: teal;
+    font-size: 20px;
+    
+    
+  }

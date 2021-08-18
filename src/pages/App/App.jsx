@@ -12,6 +12,8 @@ import DetailPage from "../DetailPage/DetailPage";
 import Settings from "../Settings/Settings";
 import CreatePage from "../CreatePage/CreatePage";
 import Footer from "../../components/Footer/Footer";
+import Search from "../SearchPage/SearchPage";
+import UpdatePage from "../UpdatePage/UpdatePage"
 
 export default function App() {
   const [user, setUser] = useState(getUser());
@@ -24,6 +26,9 @@ export default function App() {
       {user ? (
         <>
           <Switch>
+          <Route path="/Search/:searchTerm">
+              <Search />
+            </Route>
             <Route path="/home">
               <HomePage user={user} setUser={setUser} />
             </Route>
@@ -32,6 +37,9 @@ export default function App() {
             </Route>
             <Route path="/Create">
               <CreatePage />
+            </Route>
+            <Route path="/Moodboard/Update/:boardId">
+              <UpdatePage user={user}/>
             </Route>
             <Route path="/Settings">
               <Settings />

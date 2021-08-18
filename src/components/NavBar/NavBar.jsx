@@ -37,12 +37,13 @@ if (props.user != null) {
       <div className="topRight">
       <Link className="link" to="/settings"><i className="topListItem" class="fa  fa-user-circle" aria-hidden="true"></i></Link>
       &nbsp; | &nbsp;
-        <i className="topSearchIcon" class="fa fa-search" aria-hidden="true"></i>
+      <Link className="link" to="/search/searchterm"><i className="topSearchIcon" class="fa fa-search" aria-hidden="true"></i></Link>
 
       </div>
     </nav>
   );
 } else {
+  //if user is not logged in, render navbar without logout button
   return (
     <nav className="navbar">
       <div className="topLeft">
@@ -64,7 +65,7 @@ if (props.user != null) {
       &nbsp; | &nbsp;
       <Link className="link" to="/settings"><i className="topListItem" class="fa  fa-user-circle" aria-hidden="true"></i></Link>
       &nbsp; | &nbsp;
-        <i className="topSearchIcon" class="fa fa-search" aria-hidden="true"></i>
+      <Link className="link" to="/search/searchterm"><i className="topSearchIcon" class="fa fa-search" aria-hidden="true"></i></Link>
 
       </div>
     </nav>

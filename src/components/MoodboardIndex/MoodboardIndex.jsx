@@ -1,4 +1,3 @@
-//moodboard table
 import { useEffect, useState } from 'react'
 import * as moodboardsAPI from '../../utilities/moodboards-api'
 

@@ -7,7 +7,7 @@ import { getUser } from "../../utilities/users-service";
 
 export default function BoardDetail({ boardId }) {
   const [board, setBoard] = useState(null);
-  const [user, setUser] = useState(getUser());
+  const [user] = useState(getUser());
   // Use a ref prop on the <input> in the JSX to
   // create a reference to the <input>, i.e.,
   // inputRef.current will be the <input> DOM element
@@ -43,8 +43,6 @@ if (user._id === board.user) {
       <div className="singlePostWrapper">
         <h1 className="singlePostTitle">
           {board.moodboardName}
-          {/* {user}
-    {board.user.name} */}
           <div className="singlePostEdit">
             <i
               className="singlePostIcon"
@@ -59,7 +57,7 @@ if (user._id === board.user) {
           </div>
         </h1>
         <div className="singlePostInfo">
-          <span classname="singlePostAuthorDate"> {board.category} </span>
+          <span className="singlePostAuthorDate"> {board.category} </span>
         </div>
         <p>{board.description}</p>
       </div>
@@ -83,29 +81,16 @@ if (user._id === board.user) {
 
     </div>
   );
+  // else do not return buttons to upload photo or edit page
 } else {
   return (
     <div className="singlePost">
       <div className="singlePostWrapper">
         <h1 className="singlePostTitle">
           {board.moodboardName}
-          {/* {user}
-    {board.user.name} */}
-          <div className="singlePostEdit">
-            <i
-              className="singlePostIcon"
-              class="fa fa-pencil-square-o"
-              aria-hidden="true"
-            ></i>
-            <i
-              className="singlePostIcon"
-              class="fa fa-trash"
-              aria-hidden="true"
-            ></i>
-          </div>
         </h1>
         <div className="singlePostInfo">
-          <span classname="singlePostAuthorDate"> {board.category} </span>
+          <span > {board.category} </span>
         </div>
         <p>{board.description}</p>
       </div>
