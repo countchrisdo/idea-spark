@@ -42,7 +42,7 @@ For the person who needs to curate their spring/summer vs fall/winter aesthetiqu
 - React
 
 ## Getting Started
-- Make an account and broswe the site!
+- Make an account and browse the site!
 - https://ideaspark.herokuapp.com/
 
 ### Planning
