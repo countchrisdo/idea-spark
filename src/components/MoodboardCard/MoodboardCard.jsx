@@ -1,25 +1,23 @@
 import "./MoodboardCard.css";
 import { Link } from "react-router-dom";
-import { useState, useRef, useEffect } from "react";
-import * as photosAPI from "../../utilities/photos-api";
-import * as moodboardsAPI from "../../utilities/moodboards-api";
-import PhotoCard from "../../components/PhotoCard/PhotoCard";
+
 
 export default function MoodboardCard({board}) {
   return (
     <div className="mood">
+    <Link to={`/moodboard/${board._id}`}>
       <img
-        className="postImg"
+        className="boardImg"
         src={board.photos[0] ? board.photos[0].url : "https://i.imgur.com/XjwMOYg.jpg"} alt="postimg"
-      />
+      /></Link>
       <div className="boardInfo">
         <h4>Creator: {board.user.name} </h4>
         <div className="boardCats">
           <span className="boardCat">{board.category}</span>
         </div>
-        <Link to={`/moodboard/${board._id}`}> <span className="boardTitle">
+         <span className="boardTitle">
             {board.moodboardName}
-        </span></Link>
+        </span>
       </div>
     </div>
   );

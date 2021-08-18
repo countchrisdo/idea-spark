@@ -1,7 +1,6 @@
 import { Link } from "react-router-dom";
 import * as userService from "../../utilities/users-service";
 import "./NavBar.css";
-import { getUser } from "../../utilities/users-service";
 
 // Not destructuring props this time
 export default function NavBar(props) {
@@ -11,6 +10,8 @@ export default function NavBar(props) {
     // Update state will also cause a re-render
     props.setUser(null);
   }
+
+console.log(props.user);
 
 //if user is logged in, render navbar with logout button
 if (props.user != null) {

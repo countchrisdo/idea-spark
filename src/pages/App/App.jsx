@@ -37,7 +37,7 @@ export default function App() {
               <Settings />
             </Route>
             <Route path="/Moodboard/:boardId">
-              <DetailPage />
+              <DetailPage user={user}/>
             </Route>
             {/* sets default path is home */}
             <Redirect to="/home" />

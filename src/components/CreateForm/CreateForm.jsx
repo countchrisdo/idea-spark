@@ -1,38 +1,34 @@
 import "./CreateForm.css";
 import { useState, useRef } from "react";
 import { addMoodboard } from "../../utilities/moodboards-api";
+import { useHistory } from "react-router-dom";
 
 const initialFormData = {
-  moodboardName: '',
-  description: '',
-  category: 'ETC'
+  moodboardName: "",
+  description: "",
+  category: "ETC",
 };
 
-export default function CreateForm({ setShowForm, setMoodboards, Moodboards }) {
-  const [formData, setFormData] = useState({
-    moodboardName: "",
-    description: "",
-    category: "ETC"
-  });
+export default function CreateForm({ setMoodboards, moodboards }) {
+  const [formData, setFormData] = useState(initialFormData);
+  const history = useHistory();
+
+  async function handleSubmit(evt) {
+    evt.preventDefault();
+    try {
+      const saveData = await addMoodboard(formData);
+      setMoodboards([...moodboards, saveData]);
+      history.push("/home");
+    } catch {
+      console.log("HandleSubmit Failed");
+    }
+  }
 
   function handleChange(evt) {
     setFormData({
       ...formData,
       [evt.target.name]: evt.target.value,
     });
-  }
-
-  async function handleSubmit(evt) {
-    evt.preventDefault();
-    console.log(formData);
-    try {
-      // const formInfo = { ...formData };
-      const saveData = await addMoodboard(formData);
-      // setShowForm(true);
-      setMoodboards([...Moodboards, saveData]);
-    } catch {
-      console.log("error");
-    }
   }
 
   return (
@@ -60,7 +56,6 @@ export default function CreateForm({ setShowForm, setMoodboards, Moodboards }) {
             className="createInput createText"
             placeholder="What are you creating?"
             type="text"
-            autoFocus={true}
             name="description"
             value={formData.description}
             onChange={handleChange}

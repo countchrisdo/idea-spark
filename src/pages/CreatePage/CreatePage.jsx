@@ -2,6 +2,7 @@ import CreateForm from "../../components/CreateForm/CreateForm";
 import { useState, useRef, useEffect } from "react";
 import * as moodboardsAPI from "../../utilities/moodboards-api";
 
+
 export default function CreatePage() {
   const [moodboards, setMoodboards] = useState();
   

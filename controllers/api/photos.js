@@ -14,8 +14,6 @@ async function index(req, res) {
 async function upload(req, res) {
   try {
     if (req.file) {
-      // TODO: Remove the console.log after you've verified the output
-      console.log(req.file);
       // The uploadFile function will return the uploaded file's S3 endpoint
       const photoURL = await uploadFile(req.file);
       const moodboardDoc = await Moodboard.findById(req.params.boardId);

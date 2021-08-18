@@ -10,7 +10,6 @@ module.exports = {
 };
 
 async function createMoodboard(req, res) {
-    console.log(req);
     req.body.user = req.user._id;
     for (let key in req.body) {
         if (req.body[key] === '') {
@@ -20,6 +19,7 @@ async function createMoodboard(req, res) {
     
     const moodboard = await Moodboard.create(req.body);
     res.json(moodboard);
+    
 }
 // Index funcitonality for a indv user
 // async function index(req, res) {

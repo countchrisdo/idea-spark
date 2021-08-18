@@ -12,7 +12,6 @@ export default function MoodboardIndex({}) {
       async function getBoards() {
           
          const boards = await moodboardsAPI.getAll()
-         console.log(boards)
          setMoodboards(boards)
       }
       getBoards()
