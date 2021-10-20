@@ -1,5 +1,6 @@
 .create {
     padding-top: 50px;
+    padding-bottom: 50vh;
   }
 
 .createFormHeader {
@@ -71,6 +72,13 @@
   .createInput:focus {
     outline-style: none;
   }
+
+  .createFormLabel {
+    font-size: 30px;
+    color: rgb(129, 125, 125);
+    margin-left: 10px;
+    padding-right: 10px;
+  }
   
   .createText {
     width: 70vw;
@@ -82,7 +90,6 @@
   
   .createSubmit {
     color: teal;
-    font-size: 20px;
-    
+    font-size: 50px;
     
   }

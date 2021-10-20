@@ -14,13 +14,13 @@ export default function NavBar(props) {
 console.log(props.user);
 
 //if user is logged in, render navbar with logout button
-if (props.user != null) {
+if (props.user) {
   return (
     <nav className="navbar">
       <div className="topLeft">
-      <ul className="topList">
+      {/* <ul className="topList">
       
-      </ul>
+      </ul> */}
 
       </div>
       <div className="topCenter">
@@ -29,21 +29,24 @@ if (props.user != null) {
         <li className="topListItem"><Link className="link" to="/AboutPage">About</Link></li>
         <li className="topListItem"><Link className="link" to="/create">Create</Link></li>
         
+      </ul>
+      </div>
+      <div className="topRight">
+      {/* <Link className="link" to="/settings"><i className="topListItem" class="fa  fa-user-circle" aria-hidden="true"></i></Link>
+      &nbsp; | &nbsp;
+      <Link className="link" to="/search/searchterm"><i className="topSearchIcon" class="fa fa-search" aria-hidden="true"></i></Link> */}
+
+      <ul className="topList">
         <li className="topListItem"><Link className="link" onClick={handleLogOut} to="">
           Log Out
         </Link></li>
       </ul>
-      </div>
-      <div className="topRight">
-      <Link className="link" to="/settings"><i className="topListItem" class="fa  fa-user-circle" aria-hidden="true"></i></Link>
-      &nbsp; | &nbsp;
-      <Link className="link" to="/search/searchterm"><i className="topSearchIcon" class="fa fa-search" aria-hidden="true"></i></Link>
 
       </div>
     </nav>
   );
 } else {
-  //if user is not logged in, render navbar without logout button
+  //if user is not logged in, render this navbar
   return (
     <nav className="navbar">
       <div className="topLeft">
@@ -63,9 +66,9 @@ if (props.user != null) {
       <div className="topRight">
       <Link className="link" to="/Authentication">Login</Link>
       &nbsp; | &nbsp;
-      <Link className="link" to="/settings"><i className="topListItem" class="fa  fa-user-circle" aria-hidden="true"></i></Link>
+      <Link className="link" to="/"><i className="topListItem" class="fa  fa-user-circle" aria-hidden="true"></i></Link>
       &nbsp; | &nbsp;
-      <Link className="link" to="/search/searchterm"><i className="topSearchIcon" class="fa fa-search" aria-hidden="true"></i></Link>
+      <Link className="link" to="/"><i className="topSearchIcon" class="fa fa-search" aria-hidden="true"></i></Link>
 
       </div>
     </nav>

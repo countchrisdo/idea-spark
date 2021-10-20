@@ -37,10 +37,10 @@ export default function CreateForm({ setMoodboards, moodboards }) {
       <br className="" />
       <form className="createForm" autoComplete="off" onSubmit={handleSubmit}>
         <div className="createFormGroup">
-          <label>Title</label>
+          <label className="createFormLabel">Title</label>
           <input
-            className="createInput"
-            placeholder="Title"
+            className="createInput createText"
+            placeholder="Give it a name"
             type="text"
             autoFocus={true}
             name="moodboardName"
@@ -51,7 +51,7 @@ export default function CreateForm({ setMoodboards, moodboards }) {
         </div>
         <br />
         <div className="createFormGroup">
-          <label>Description</label>
+          <label className="createFormLabel">Description</label>
           <textarea
             className="createInput createText"
             placeholder="What are you creating?"
@@ -64,7 +64,7 @@ export default function CreateForm({ setMoodboards, moodboards }) {
         </div>
         <br />
         <div className="createFormGroup">
-          <label>Category</label>
+          <label className="createFormLabel">Category</label>
           <select
             className=" createText"
             name="category"

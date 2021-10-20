@@ -33,20 +33,21 @@ export default function BoardDetail({ boardId }) {
     // Clear the file input
     fileInputRef.current.value = "";
   }
-// if empty, return null to not crash
+  // if empty, return null to not crash
   if (!board) return null;
 
   console.log("Logged in User", user);
   console.log("Board Creator User", board.user);
-// if logged in user is owner, return upload button
-if (user._id === board.user) {
-  return (
-    <div className="singlePost">
-      <div className="singlePostWrapper">
-        <h1 className="singlePostTitle">
-          {board.moodboardName}
-          <Link className="link" to="/Moodboard/Update/:boardId">
-          <div className="singlePostEdit">
+  // if logged in user is owner, return upload button
+  if (user._id === board.user) {
+    return (
+      <div className="singlePost">
+        <div className="singlePostWrapper">
+          <h1 className="singlePostTitle">
+            {board.moodboardName}
+            <Link className="link" to="/Moodboard/Update/:boardId">
+            {/* Edit and delete feature WIP */}
+              {/* <div className="singlePostEdit">
             <i
               className="singlePostIcon"
               class="fa fa-pencil-square-o"
@@ -57,61 +58,55 @@ if (user._id === board.user) {
               class="fa fa-trash"
               aria-hidden="true"
             ></i>
+          </div> */}
+            </Link>
+          </h1>
+          <div className="singlePostInfo">
+            <span className="singlePostAuthorDate"> {board.category} </span>
           </div>
-          </Link>
-        </h1>
-        <div className="singlePostInfo">
-          <span className="singlePostAuthorDate"> {board.category} </span>
+          <p>{board.description}</p>
         </div>
-        <p>{board.description}</p>
+
+        <hr className="hr" />
+
+        {/* Photo grid */}
+        <section className="PhotoCard">
+          {board.photos.map((p) => (
+            <PhotoCard photo={p} key={p._id} />
+          ))}
+        </section>
+
+        <hr className="hr" />
+
+        <section className="flex-ctr-ctr">
+          <input type="file" ref={fileInputRef} />
+          <button onClick={handleUpload}>Upload Photo</button>
+        </section>
       </div>
-     
-      <hr className="hr" />
-
-      {/* Photo grid - to be styled */}
-      <section className="PhotoCard">
-        {board.photos.map((p) => (
-          <PhotoCard photo={p} key={p._id} />
-        ))}
-      </section>
-
-      <hr className="hr" />
-
-      <section className="flex-ctr-ctr">
-        <input type="file" ref={fileInputRef} />
-        <button onClick={handleUpload}>Upload Photo</button>
-      </section>
-     
-
-    </div>
-  );
-  // else do not return buttons to upload photo or edit page
-} else {
-  return (
-    <div className="singlePost">
-      <div className="singlePostWrapper">
-        <h1 className="singlePostTitle">
-          {board.moodboardName}
-        </h1>
-        <div className="singlePostInfo">
-          <span > {board.category} </span>
+    );
+    // else do not return buttons to upload photo or edit page
+  } else {
+    return (
+      <div className="singlePost">
+        <div className="singlePostWrapper">
+          <h1 className="singlePostTitle">{board.moodboardName}</h1>
+          <div className="singlePostInfo">
+            <span> {board.category} </span>
+          </div>
+          <p>{board.description}</p>
         </div>
-        <p>{board.description}</p>
+
+        <hr className="hr" />
+
+        {/* Photo grid - to be styled */}
+        <section className="PhotoCard">
+          {board.photos.map((p) => (
+            <PhotoCard photo={p} key={p._id} />
+          ))}
+        </section>
+
+        <hr className="hr" />
       </div>
-     
-      <hr className="hr" />
-
-      {/* Photo grid - to be styled */}
-      <section className="PhotoCard">
-        {board.photos.map((p) => (
-          <PhotoCard photo={p} key={p._id} />
-        ))}
-      </section>
-
-      <hr className="hr" />
-
-    </div>
-  );
+    );
+  }
 }
-}
-
