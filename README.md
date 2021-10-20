@@ -48,7 +48,7 @@ For the person who needs to curate their spring/summer vs fall/winter aesthetiqu
 - node server (To run the server)
 - npm start (To run the app in the browser)
 
-### What's next for WTPA?
+### What's next for Idea Spark?
 - ~~Upload images~~
 - Social Media intergration
 - Public and Private Boards
