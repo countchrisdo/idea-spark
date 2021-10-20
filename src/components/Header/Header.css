@@ -12,19 +12,19 @@
 
 .headerTitleSm {
   position: absolute;
-  top: 15%;
+  top: 10%;
   font-size: 20px;
 }
 
 .headerTitleLg {
   position: absolute;
-  top: 15%;
+  top: 10%;
   font-size: 100px;
 }
 
 .headerImg {
   width: 100%;
-  height: 450px;
+  height: 300px;
   margin-top: 80px;
   object-fit: cover;
 }
