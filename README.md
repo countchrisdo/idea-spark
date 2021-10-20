@@ -29,7 +29,7 @@ For the person who needs to curate their spring/summer vs fall/winter aesthetiqu
 <img src="https://i.imgur.com/LxDne0O.jpg" alt="img2" width="100%"/>
 
 
-## Tech!
+## Tech
 
 - Html, CSS, Javascript
 - Amazon S3
