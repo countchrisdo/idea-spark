@@ -43,8 +43,10 @@ For the person who needs to curate their spring/summer vs fall/winter aesthetiqu
 - Make an account and browse the site!
 - https://ideaspark.herokuapp.com/
 
-### Planning
-- [Trello Board](https://trello.com/b/JZ6G2PbT/idea-spark-%F0%9F%92%A1%E2%9C%A8-moodboards)
+### How to run
+- npm install
+- node server (To run the server)
+- npm start (To run the app in the browser)
 
 ### What's next for WTPA?
 - ~~Upload images~~
