@@ -31,9 +31,7 @@ For the person who needs to curate their spring/summer vs fall/winter aesthetiqu
 
 ## Tech!
 
-- Html
-- CSS
-- Javascript
+- Html, CSS, Javascript
 - Amazon S3
 - Heroku Deployment
 - Node.js
