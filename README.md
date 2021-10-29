@@ -12,8 +12,7 @@ For the person who needs to curate their spring/summer vs fall/winter aesthetiqu
 - Game Ideas
 - Event Planning
 - Room Decorating
-- Conceptual Art planning
-- Writing Inspiration
+- Artist/Writing Inspiration
 
 [CLICK ME!](https://ideaspark.herokuapp.com/)
 
