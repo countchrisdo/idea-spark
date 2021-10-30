@@ -18,7 +18,7 @@ For the person who needs to curate their spring/summer vs fall/winter aesthetiqu
 
 ## Feature List
 
-- Create a new board
+- Create a board with a Title/Category/Description
 - Upload your images or add them from the web
 - Share your board with the world
 
