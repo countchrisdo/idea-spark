@@ -4,7 +4,7 @@
 
 Idea Spark is a brand new destination to view and share your ideas with the world! Create a board full of images to invoke your ideas and stir your creativity.
 
-For the person who needs to curate their spring/summer vs fall/winter aesthetique. For the person upgrading their interior design to a Scandinavian post-modern architecture that doesn't scream "IKEA". But mainly for the person trying to draw inspiration from a bunch of images mish-mashed together in a semi-random, pleasing manner.
+For the person who needs to curate their spring/summer vs fall/winter aesthetique. For the person upgrading their interior design to a Scandinavian post-modern architecture that doesn't scream "IKEA" but mainly for the person trying to draw inspiration from a bunch of images mish-mashed together in a semi-random, pleasing manner.
 
 ## Potential usages
 - DND Sessions
